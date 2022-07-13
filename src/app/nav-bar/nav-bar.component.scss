@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@1,700&display=swap');
+
+a{
+  text-decoration: none;  
+  font-family: 'Cabin', sans-serif;
+  font-size: 23px;
+  color: white;
+}
+
+.background-sidebar{
+   background-color: #4568dc;
+}
+
+.background-image{
+background-image: linear-gradient(
+  135deg,
+  hsl(354deg 89% 78%) 1%,
+  hsl(5deg 100% 79%) 43%,
+  hsl(15deg 100% 77%) 50%,
+  hsl(23deg 100% 76%) 51%,
+  hsl(32deg 93% 74%) 51%,
+  hsl(41deg 81% 72%) 49%,
+  hsl(52deg 66% 70%) 49%,
+  hsl(70deg 63% 72%) 50%,
+  hsl(90deg 74% 77%) 57%,
+  hsl(118deg 91% 83%) 99%
+);
+}
+
+

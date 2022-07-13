@@ -1,0 +1,31 @@
+<div class="container-fluid ">
+    <div class="row d-flex vh-100 vw-100">
+      <div class="col-md-5 col-lg-5 d-flex flex-column p-0 h-100">
+        <div class="container-text">
+        <h1 class="text-center mt-5">Registrarse</h1>
+
+        </div>
+        <form class="d-flex flex-column " [formGroup]="form">
+            <mat-form-field appearance="fill" class="mx-5 mt-3 ">
+                <mat-label>Nombre</mat-label>
+                <mat-error>Campo Requerido</mat-error>
+                <input matInput type="text" formControlName="name">
+            </mat-form-field>
+        <mat-form-field appearance="fill" class="mx-5 mt-3 ">
+            <mat-label>Email</mat-label>
+            <mat-error>Campo Requerido</mat-error>
+            <input matInput type="text" formControlName="email">
+        </mat-form-field>
+            <mat-form-field appearance="fill"  class="mx-5">
+                <mat-label>Contraseña</mat-label>
+                <mat-error>Campo Requerido</mat-error>
+                <input matInput type="password" formControlName="password">
+              </mat-form-field>
+              <button type="button" class="btn btn-outline-success mx-5">Registrarse</button>
+            </form>
+      </div>
+      <div class=" col-md-7 col-lg-7 d-none  d-md-flex p-0 background vh-100" >
+       <img class=" float-end opacity-25 h-100 w-100 imagen-position" src="\assets\register-imagen.jpg" alt="img-register">
+      </div>
+      </div>
+    </div>

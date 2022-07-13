@@ -1,0 +1,33 @@
+<div class="container-fluid ">
+    <div class="row d-flex vh-100 vw-100">
+      <div class="col-md-5 col-lg-5 d-flex flex-column p-0 h-100">
+        <div class="container-text">
+        <h1 class="text-center mt-5">¡Bienvenido!</h1 >
+        <h1  class="text-center">Iniciar Sesion</h1 >
+        </div>
+        <form class="d-flex flex-column " [formGroup]="formRecycler">
+        <mat-form-field appearance="fill" class="mx-5 mt-3 ">
+            <mat-label>Email</mat-label>
+            <mat-error>Campo Requerido</mat-error>
+            <input matInput type="text" formControlName="email">
+        </mat-form-field>
+            <mat-form-field appearance="fill"  class="mx-5">
+                <mat-label>Contraseña</mat-label>
+                <mat-error>Campo Requerido</mat-error>
+                <input matInput type="password" formControlName="password">
+              </mat-form-field>
+              <button type="button" class="btn btn-outline-success mx-5">Entrar</button>
+            </form>
+              <p class="text-center mt-4">¿Todavia no estas registrado?</p>
+              <div class="text-center mb-5">
+              <a href="" routerLink="/register">Ingresa Aquì para registrarte</a>
+              </div>
+              <p class="text-center ">O mediante google</p>
+              <button type="button" class="btn btn-outline-danger mx-5">Google</button>
+
+      </div>
+      <div class=" col-md-7 col-lg-7 d-none  d-md-flex p-0 background" >
+       <img class=" float-end opacity-25 h-100 w-100" src="\assets\login-imagen.jpg" alt="img-login">
+      </div>
+      </div>
+    </div>
