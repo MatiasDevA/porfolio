@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+}
+
+.containe{
+    max-width: 500px;
+    margin: 30px auto;
+    min-height: 300px;
+    border: 1px solid black;
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.ng-valid{
+    border-color: lightgreen;
+}
+
+.height{
+    height: 100px;
+}

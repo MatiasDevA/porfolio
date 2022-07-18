@@ -13,6 +13,20 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { PagenotfoundcomponentComponent } from './pagenotfoundcomponent/pagenotfoundcomponent.component';
+import { CommentsComponent } from './comments/comments.component';
+import { CommentsFormComponent } from './comments-form/comments-form.component';
+import { TableComponent } from './components/table/table.component';
+import { UsersComponent } from './users/users.component';
+import { UsersFormComponent } from './users/users-form/users-form.component';
+import { environment } from 'src/environments/environment';
+import { provideAuth, getAuth} from "@angular/fire/auth"
+import { AuthService } from '../core/auth.service';
+import { HttpClientModule } from '@angular/common/http';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+
+import { AuthGoogleService } from '../core/auth-google.service';
+
+
 
 @NgModule({
   declarations: [
@@ -24,6 +38,11 @@ import { PagenotfoundcomponentComponent } from './pagenotfoundcomponent/pagenotf
     NavbarComponent,
     FooterComponent,
     PagenotfoundcomponentComponent,
+    CommentsComponent,
+    CommentsFormComponent,
+    TableComponent,
+    UsersComponent,
+    UsersFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,9 +50,13 @@ import { PagenotfoundcomponentComponent } from './pagenotfoundcomponent/pagenotf
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+    provideAuth(() => getAuth())
+   
   ],
-  providers: [],
+  providers: [AuthService, AuthGoogleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,34 @@
+<div class=" container-fluid  ">
+    <app-navbar></app-navbar>
+<div class="row containe d-block ">
+    <p class=" col-1ms-2 mt-2 "><b>Agregar Comentario</b></p>
+    <form class="form-floating h-100 p-0 " [formGroup]="formLogin" >
+        <div class="col-3 w-100 my-5">
+          <div class="form-floating ">
+            <input type="text" class="form-control" id="floatingInputGrid" formControlName="name" >
+            <p *ngIf="Name?.touched && Name?.errors" class="text-danger">Requiere un Nombre</p>
+            <label for="floatingInputGrid">Nombre</label>
+          </div>
+        </div>
+        <div class="col-6 w-100 my-5">
+          <div class="form-floating">
+            <input type="file" class="form-control m-0" id="floatingInputGrid" formControlName="imagen" accept=".png, .jpg, .jpeg"  (change)="changeImageBase64($event)">
+            <div *ngIf="Imagen?.errors && Imagen?.touched">
+            <p *ngIf="Imagen?.hasError('required')" class="text-danger">Requiere una imagen</p>
+            </div>
+          </div>
+          <img *ngIf="Imagen?.touched && Imagen?.valid" [src]="archivoImage" class="img-thumbnail" alt="...">
+        </div>
+      <div class="col-2 w-100">
+        <div class="form-floating my-5">
+          <textarea class="form-control h-100"  id="floatingTextarea2" formControlName="message" ></textarea>
+          <p *ngIf="Message?.touched" class="text-danger"> Escriba algo</p>
+          <label for="floatingTextarea2">Escribe un Comentario</label>
+        </div>
+        <div class="my-5">
+        <button class="btn btn-info w-25 text-light"  [disabled]="formLogin.invalid"> Enviar</button>
+        </div>
+    </div>
+    </form>
+   </div>
+</div>

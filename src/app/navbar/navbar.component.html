@@ -2,12 +2,11 @@
 <div class="col p-0 m-0">
 <nav class="d-flex justify-content-end">
     <a href="" class="mx-2">Inicio</a>
-    <a routerLink="/register" class="mx-3">Crear Cuenta</a>
-    <a  routerLink="/login" class="mx-3">Registrarse</a>
-    <a  routerLink="/login" class="mx-3"></a>
-    <a  routerLink="/login"class="mx-3">cccc</a>
-    <button class="btn btn-secondary ms-3 boton">Entrar</button>
-    <button class="btn btn-secondary ms-2 boton">Registrarse</button>
+    <a  routerLink="/login" class="mx-3" *ngIf="isLogged">Iniciar Sesión</a>
+    <a  routerLink="/comment/form" class="mx-3">Comentarios</a>
+    <a  routerLink="/list"class="mx-3">Lista</a>
+    <button class="btn btn-danger ms-3 boton" (click)="onLogOut()" *ngIf="!isLogged">Salirse</button>
+   <a routerLink="/register"class="mx-3" *ngIf="isLogged">Registrarse</a>
   </nav>
 </div>
 </div>

@@ -16,14 +16,14 @@
                 <mat-error>Campo Requerido</mat-error>
                 <input matInput type="password" formControlName="password">
               </mat-form-field>
-              <button type="button" class="btn btn-outline-success mx-5">Entrar</button>
+              <button type="button" class="btn btn-outline-success mx-5" (click)="login()">Entrar</button>
             </form>
               <p class="text-center mt-4">¿Todavia no estas registrado?</p>
               <div class="text-center mb-5">
               <a href="" routerLink="/register">Ingresa Aquì para registrarte</a>
               </div>
               <p class="text-center ">O mediante google</p>
-              <button type="button" class="btn btn-outline-danger mx-5">Google</button>
+              <button type="button" class="btn btn-outline-danger mx-5 " (click)="onClickWithGoogle()">Google</button>
 
       </div>
       <div class=" col-md-7 col-lg-7 d-none  d-md-flex p-0 background" >
